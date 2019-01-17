@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from "react-redux";
+import {handleSearch} from "../../../actions/userActions";
 
-export default class SearchBar extends Component {
-    state = {
-        searchValue: ""
-    };
+class SearchBar extends Component {
 
     onSubmit = e => {
         e.preventDefault();
@@ -20,7 +19,7 @@ export default class SearchBar extends Component {
             <form className="form-row" onSubmit={this.onSubmit}>
                 <div className="col-12 col-md-9">
                     <input type="text"
-                            defaultValue={this.state.searchValue}
+                           defaultValue={this.props.searchValue}
                            onChange={this.onChange} className="form-control form-control-lg" placeholder="Type any username here"/>
                 </div>
                 <div className="col-12 col-md-3">
@@ -30,3 +29,9 @@ export default class SearchBar extends Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+    searchValue: state.searchValue
+});
+
+export default connect(mapStateToProps, {handleSearch})(SearchBar)

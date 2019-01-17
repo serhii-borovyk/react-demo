@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import {connect} from "react-redux";
 
 const EMPTY = "Empty search criteria";
 
-export default class SearchHistoryArea extends Component {
+class SearchHistoryArea extends Component {
     render() {
-        console.log("SearchHistoryArea", this.props.searchHistory);
+        console.log("SearchHistoryArea", this.props);
         return (
             <div className="form-group green-border col-6 col-md-6">
                 <h2><span className="badge badge-secondary col-12 col-md-12">Search history</span></h2>
@@ -17,3 +18,9 @@ export default class SearchHistoryArea extends Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+    searchHistory: state.user.searchHistory
+});
+
+export default connect(mapStateToProps)(SearchHistoryArea)

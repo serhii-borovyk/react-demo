@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import SearchResultsTableRow from "./SearchResultsTableRow";
+import {connect} from "react-redux";
 
-export default class SearchResultsTable extends Component {
+class SearchResultsTable extends Component {
     render() {
         console.log("SearchResultsTable", this.props.users);
         let {users} = this.props;
@@ -24,3 +25,9 @@ export default class SearchResultsTable extends Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+    users: state.user.users
+});
+
+export default connect(mapStateToProps, null)(SearchResultsTable)
