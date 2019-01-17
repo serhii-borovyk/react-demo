@@ -1,2 +1,3 @@
 export const GET_USERS = "GET_USERS";
 export const HISTORY_CLICK = "HISTORY_CLICK";
+export const CHANGE_SEARCH_VALUE = "CHANGE_SEARCH_VALUE";

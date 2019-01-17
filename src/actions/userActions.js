@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_USERS, HISTORY_CLICK} from "./types";
+import {CHANGE_SEARCH_VALUE, GET_USERS, HISTORY_CLICK} from "./types";
 
 const PROXY = "http://localhost:8080/users/";
 
@@ -21,6 +21,15 @@ export const handleHistoryClick = searchValue => async dispatch => {
         payload: {
             users: result.data,
             searchValue
+        }
+    })
+};
+
+export const handleChangeSearchValue = searchValue => dispatch => {
+    dispatch({
+        type: CHANGE_SEARCH_VALUE,
+        payload: {
+            searchValue: searchValue
         }
     })
 };

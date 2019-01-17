@@ -1,4 +1,4 @@
-import {GET_USERS, HISTORY_CLICK} from "../actions/types";
+import {CHANGE_SEARCH_VALUE, GET_USERS, HISTORY_CLICK} from "../actions/types";
 
 const initialState = {
     users: undefined,
@@ -21,6 +21,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 users: action.payload.users,
+                searchValue: action.payload.searchValue
+            };
+        case CHANGE_SEARCH_VALUE:
+            console.log("REDUCE", CHANGE_SEARCH_VALUE, action.payload);
+            return {
+                ...state,
                 searchValue: action.payload.searchValue
             };
         default:
