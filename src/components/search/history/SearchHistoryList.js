@@ -8,7 +8,7 @@ class SearchHistoryList extends Component {
         return (
             <div className="form-group green-border col-6 col-md-6">
                 <h2><span className="badge badge-secondary col-12 col-md-12">Search history</span></h2>
-                <div className="list-group">
+                <div className="list-group" hidden={!this.props.searchHistory.length}>
                     {this.props.searchHistory
                         .map(current => <SearchHistoryElement element={current}/>)}
 
