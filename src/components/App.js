@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../App.css';
-import SearchBar from "./SearchBar";
-import SearchResultsArea from "./search_area/SearchResultsArea";
+import SearchBar from "./search/input/SearchBar";
+import SearchResultsArea from "./search/results/json/SearchResultsArea";
 import axios from 'axios';
-import SearchHistoryArea from "./search_area/SearchHistoryArea";
-import SearchResultsTable from "./search_table/SearchResultsTable";
+import SearchHistoryArea from "./search/history/SearchHistoryArea";
+import SearchResultsTable from "./search/results/table/SearchResultsTable";
 
 class App extends Component {
 
