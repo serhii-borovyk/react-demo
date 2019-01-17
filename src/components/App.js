@@ -14,7 +14,7 @@ class App extends Component {
     };
 
     handleSearch = searchValue => {
-        axios.get(`http://localhost:8080/user/?name=${searchValue}`)
+        axios.get(`http://localhost:8080/users/${searchValue}`)
             .then(result => this.setState({
                 searchHistory: this.state.searchHistory.concat(searchValue),
                 users: result.data
