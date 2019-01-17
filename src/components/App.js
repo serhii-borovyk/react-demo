@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import SearchBar from "./search/input/SearchBar";
 import SearchResultsArea from "./search/results/json/SearchResultsArea";
-import SearchHistoryArea from "./search/history/SearchHistoryArea";
+import SearchHistoryArea from "./search/history/SearchHistoryList";
 import SearchResultsTable from "./search/results/table/SearchResultsTable";
 
 class App extends Component {

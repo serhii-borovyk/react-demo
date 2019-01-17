@@ -30,9 +30,20 @@
     margin-top: 40px;
 }
 
-.jumbotron{
+.list-group-item {
+    min-height: 50px;
+}
+
+.list-group {
+    max-height: 230px;
+    margin-bottom: 10px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jumbotron {
     height: 100vh;
-    background-color:aliceblue !important;
+    background-color: aliceblue !important;
 }
 
 @keyframes App-logo-spin {
